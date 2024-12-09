@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.miniproject2.HelloController">
+    <children>
+        <TextField id="queryInput" fx:id="queryInput" layoutX="47.0" layoutY="58.0" prefHeight="44.0" prefWidth="257.0" promptText="Enter Query:" />
+        <TextArea id="resultArea" fx:id="resultArea" editable="false" layoutX="47.0" layoutY="130.0" prefHeight="115.0" prefWidth="299.0" />
+        <Button id="executeButton" fx:id="executeButton" layoutX="47.0" layoutY="278.0" mnemonicParsing="false" onAction="#handleExecuteButtonAction" prefHeight="35.0" prefWidth="91.0" text="Execute" />
+    </children>
+</AnchorPane>
