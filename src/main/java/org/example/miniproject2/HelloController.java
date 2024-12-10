@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import org.example.miniproject2.Database;
 import java.sql.*;
 
+
 public class HelloController {
 
     @FXML
@@ -40,10 +41,12 @@ public class HelloController {
             if (query.toLowerCase().startsWith("select")) {
                 resultSet = statement.executeQuery(query); // Execute SELECT query
                 StringBuilder results = new StringBuilder();
-
                 while (resultSet.next()) {
-                    results.append(resultSet.getString(1)).append("\n"); // Assuming the first column is what you want to display
+                    for(int i = 0; i < 13; i++) {
+                        results.append(resultSet.getString(i)).append("\n");
+                    }// Assuming the first column is what you want to display
                 }
+
 
                 resultArea.setText(results.toString());
             } else if (query.toLowerCase().startsWith("update") || query.toLowerCase().startsWith("delete")) {
